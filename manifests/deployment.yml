@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jayantbhardwajtejrepo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jayantbhardwajtejrepo
+  template:
+    metadata:
+      labels:
+        app: jayantbhardwajtejrepo 
+    spec:
+      containers:
+        - name: jayantbhardwajtejrepo 
+          image: accregistrynew.azurecr.io/jayantbhardwajtejrepo
+          ports:
+          - containerPort: 80
