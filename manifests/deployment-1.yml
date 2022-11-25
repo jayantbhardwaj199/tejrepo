@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "accapp-e1e8"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "accapp-e1e8"
+  template:
+    metadata:
+      labels:
+        app: "accapp-e1e8"
+    spec:
+      containers:
+        - name: "accapp-e1e8"
+          image: "accregistrynew.azurecr.io/accapp"
+          ports:
+          - containerPort: 80
